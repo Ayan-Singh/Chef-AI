@@ -1,7 +1,9 @@
 import { useState } from "react"
 function Main(){
 
+
 const [ingredients,setIngredients] =useState([]);
+
 
 const ingredientListItems=ingredients.map(ingredient => (
     <li key={ingredient}>{ingredient}</li>
@@ -12,7 +14,6 @@ function handleSubmit(event){
     const newIngredient = formData.get("ingredient");
     setIngredients(prevIngredients => [...prevIngredients ,newIngredient])
 }
-
     return(
         <main>
             <form onSubmit={handleSubmit} className="add-form">
@@ -39,5 +40,6 @@ function handleSubmit(event){
         </main>
     )
 }
+
 
 export default Main
